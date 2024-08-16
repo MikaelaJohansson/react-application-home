@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -68,8 +69,11 @@ const Login = () => {
      onChange={(e)=> setPasswordInput (e.target.value)}   
      />
      <br />
-    <button type="submit" onClick={submit}>Skicka in</button>      
+    <button type="submit" onClick={submit}>Skicka in</button> 
+    <br />
+    <Link to="/Registration">Registrera dig här</Link>     
     </div>
+   
   )
 }
 

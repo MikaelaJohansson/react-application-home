@@ -1,10 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
+import MyOffCanvas from './MyOffCanvas';
+
+
 
 const Chat = () => {
   const [userPost, setUserPost] = useState('');
   const [messages, setMessages] = useState([]);
+
+  const avatar=sessionStorage.getItem('avatar');
+  const username=sessionStorage.getItem('username');
 
   useEffect(() => {
     fetchMessages(); 
@@ -70,6 +76,13 @@ const Chat = () => {
 
   return (
     <div>
+      <header>
+        <h1>hej {username}!</h1>
+        <img src={avatar} width={'200px'} alt="avatar" />
+      </header>
+      <br />
+     
+      <MyOffCanvas username={username} avatar={avatar} />
       <label>Skriv ett inlägg:</label>
       <br />
       <input
