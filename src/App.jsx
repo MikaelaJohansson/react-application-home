@@ -1,6 +1,7 @@
 import Login from "./Components/Login"
 import Registration from "./Components/Registration"
 import Chat from './Components/Chat'
+import FriendChat from "./Components/FriendChat";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditProfile from "./Components/EditProfile";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/Registration" element={<Registration/>}/>
         <Route path="/Chat" element={<Chat/>}/>
+        <Route path="/FriendChat" element={<FriendChat/>}/>
         <Route path="/EditProfile" element={<EditProfile/>}/>
       </Routes>
     </Router>
